@@ -1,8 +1,12 @@
+# Problem 2
+# Title:    Even Fibonacci numbers
+# Author:   Paul Kim
+# Date:     6/9/2017
+
+# Description
 # Each new term in the Fibonacci sequence is generate by adding the previous two
 # two terms. By starting with 1 and 2, the first 10 terms will be:
-
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
-
 # By considering the terms in the Fibonacci sequence whose values do not exceed
 # four million, find the sum of the even-valued terms.
 
