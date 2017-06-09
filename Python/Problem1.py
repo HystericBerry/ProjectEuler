@@ -55,7 +55,7 @@ def three_five_mult_sumOpt( max ):
 
 #####MAIN METHOD#####
 upperBound = 1000
-format = "sum of all whole numbers below %d is: %d."
+format = "sum of all 3 or 5 multiples below %d is: %d."
 
 # unoptimized method call
 # sum = three_five_mult_sum(upperBound)
@@ -64,4 +64,4 @@ format = "sum of all whole numbers below %d is: %d."
 # optimized method call
 sum = three_five_mult_sumOpt(upperBound)
 print(format % (upperBound, sum))
-# sum of all whole numbers below 1000 is: 233168.
+# sum of all 3 or 5 multiples below 1000 is: 233168.
