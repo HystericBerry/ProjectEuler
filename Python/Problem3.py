@@ -2,7 +2,7 @@
 Problem 3
 Title:    Largest Prime Factor
 Author:   Paul Kim
-Date:     6/9/2017
+Date:     6/19/2017
 
 Description:
 The prime factors of 13195 are 5, 7, 13 and 29.
@@ -44,6 +44,7 @@ def largetPrimeFactor(num):
             return i
 
     return -1
+
 #####MAIN METHOD#####
 format = "Largest prime factor of %d! is: %d."
 
