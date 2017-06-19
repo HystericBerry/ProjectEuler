@@ -14,7 +14,7 @@ numbers from 1 to 20?
 
 import math
 
-# returns a set of primes less than N (exclusive)
+# returns a list of primes less than N (exclusive)
 def primeSieve(N):
     cache = [True]*N
 
