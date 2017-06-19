@@ -12,7 +12,7 @@ What is the largest prime factor of the number 600851475143?
 
 import math
 
-# returns a set of primes less than N (exclusive)
+# returns a list of primes less than N (exclusive)
 def primeSieve(N):
     cache = [True]*N
 
