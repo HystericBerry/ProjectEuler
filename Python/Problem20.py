@@ -31,3 +31,5 @@ fact = factorial(n)
 
 sum = sum_of_elements(fact)
 print(format % (n, sum))
+
+# Sum of all digits of 100! is: 648.

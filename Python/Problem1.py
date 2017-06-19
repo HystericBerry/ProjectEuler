@@ -64,4 +64,5 @@ format = "sum of all 3 or 5 multiples below %d is: %d."
 # optimized method call
 sum = three_five_mult_sumOpt(upperBound)
 print(format % (upperBound, sum))
+
 # sum of all 3 or 5 multiples below 1000 is: 233168.
