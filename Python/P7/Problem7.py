@@ -35,10 +35,13 @@ def primeSieve(N):
     return primes
 
 #####MAIN METHOD#####
-format = "The %dth prime number is: %d"
-N = 10001
-primes = primeSieve(105000)
+def Main():
+    format = "The %dth prime number is: %d"
+    N = 10001
+    primes = primeSieve(105000)
 
-print("The first 6 prime numbers: ", primes[:6])
-print(format % (N, primes[N-1]))
-# The 10001th prime number is: 104743
+    print("The first 6 prime numbers: ", primes[:6])
+    print(format % (N, primes[N-1]))
+    # The 10001th prime number is: 104743
+
+Main()

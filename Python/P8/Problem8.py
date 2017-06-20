@@ -32,21 +32,84 @@ are 9 * 9 * 8 * 9 = 5832.
 Find the thirteen adjacent digits in the 1000-digit number that have the
 greatest product. what is the value of this product?
 """
-import sys,os
+#####LIBRARIES#####
+import sys, os
 
-path = os.path.join(os.path.dirname(__file__), "digits.in")
-print(path)
-f = open(path)
+#####FUNCTIONS#####
+# returns a map of <K = digit, V = num occurence of digit>. The map represents
+# the number of digits in the given string but does not track position of digits.
+def toDigits(s):
+    digits = {}
+    for c in s:
+        i = int(c)
+        if i in digits:
+            digits[i] = digits.get(i)+1
+        else:
+            digits[i] = 1
+    return digits
 
-# implement a combination of modulo and string splicing
-for s in f:
-    s = s.strip()
+# returns the product of all digits represented by the Map
+def digitsToProduct(digits):
+    product = 1
+    for K, V in digits.items():
+        product *= (K**V)
+    return product
 
-    for i in range(len(s)):
-        digits[i:(i+13)]
-    for i in s:
-        val = int(i)
-        digits += i
-    print(digits)
+# returns the curr N digits given an index, the prev string, curr string, and
+# the starting position
+def currString(N, curr, next, start):
+    end = start + N
+    if end < len(curr) or next == None:
+        return curr[start:end]
+    else:
+        end = N - (len(curr) - start)
+        return curr[start:] + next[:end]
 
-f.close()
+def largestProductOfAdjacent(path, N):
+    f = open(path)
+    curr = f.readline()
+    curr = curr.strip()
+
+    digitString = None
+    max = -sys.maxsize
+
+    if curr != None:
+        for next in f:
+            next = next.strip()
+            for i in range(len(curr)):
+                s = currString(N, curr, next, i)
+                digits = toDigits(s)
+                product = digitsToProduct(digits)
+                if product > max:
+                    max = product
+                    digitString = s
+            curr = next
+
+        next = None
+        for i in range(len(curr)-N+1):
+            s = currString(N, curr, next, i)
+            digits = toDigits(s)
+            product = digitsToProduct(digits)
+            if product > max:
+                max = product
+                digitString = s
+    f.close()
+    return digitString, max
+
+
+#####MAIN METHOD#####
+def Main():
+    format = "The largest product of %d adjacent digits is: %s = %d"
+    path = os.path.join(os.path.dirname(__file__), "digits.in")
+
+    N = 4
+    digits, largest = largestProductOfAdjacent(path, N)
+    print(format % (N, digits, largest))
+    # The largest product of 4 adjacent digits is: 9989 = 5832
+
+    N = 13
+    digits, largest = largestProductOfAdjacent(path, N)
+    print(format % (N, digits, largest))
+    # The largest product of 13 adjacent digits is: 5576689664895 = 23514624000
+
+Main()

@@ -46,18 +46,21 @@ def largetPrimeFactor(num):
     return -1
 
 #####MAIN METHOD#####
-format = "Largest prime factor of %d! is: %d."
+def Main():
+    format = "Largest prime factor of %d is: %d."
 
-num = 13195
-lpf = largetPrimeFactor(num)
-print(format % (num, lpf))
+    num = 13195
+    lpf = largetPrimeFactor(num)
+    print(format % (num, lpf))
 
-# Largest prime factor of 13195! is: 29.
+    # Largest prime factor of 13195! is: 29.
 
 
 
-num = 600851475143
-lpf = largetPrimeFactor(num)
-print(format % (num, lpf))
+    num = 600851475143
+    lpf = largetPrimeFactor(num)
+    print(format % (num, lpf))
 
-# Largest prime factor of 600851475143! is: 6857.
+    # Largest prime factor of 600851475143 is: 6857.
+
+Main()

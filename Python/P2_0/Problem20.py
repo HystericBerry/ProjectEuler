@@ -25,11 +25,14 @@ def sum_of_elements( n ):
 
 
 #####MAIN METHOD#####
-format = "Sum of all digits of %d! is: %d."
-n = 100
-fact = factorial(n)
+def Main():
+    format = "Sum of all digits of %d! is: %d."
+    n = 100
+    fact = factorial(n)
 
-sum = sum_of_elements(fact)
-print(format % (n, sum))
+    sum = sum_of_elements(fact)
+    print(format % (n, sum))
 
-# Sum of all digits of 100! is: 648.
+    # Sum of all digits of 100! is: 648.
+
+Main()

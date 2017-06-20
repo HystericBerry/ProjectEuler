@@ -77,19 +77,22 @@ def minFactor(N):
 
 
 #####MAIN METHOD#####
-format = "The smallest positive number evenly divisible by all numbers between "
-format += "1 and %d is: %d."
+def Main():
+    format = "The smallest positive number evenly divisible by all numbers between "
+    format += "1 and %d is: %d."
 
-N = 10
-factors = smallestMultiple(N)
-print(format % (N, factors))
+    N = 10
+    factors = smallestMultiple(N)
+    print(format % (N, factors))
 
-# The smallest positive number evenly divisible by all numbers between 1 and
-# 10 is: 2520.
+    # The smallest positive number evenly divisible by all numbers between 1 and
+    # 10 is: 2520.
 
-N = 20
-factors = smallestMultiple(N)
-print(format % (N, factors))
+    N = 20
+    factors = smallestMultiple(N)
+    print(format % (N, factors))
 
-# The smallest positive number evenly divisible by all numbers between 1 and 20
-# is: 232792560.
+    # The smallest positive number evenly divisible by all numbers between 1 and 20
+    # is: 232792560.
+
+Main()

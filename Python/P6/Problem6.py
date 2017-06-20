@@ -30,18 +30,20 @@ def squareOfSums(N):
         sum += i
     return sum*sum
 
-format = """The difference betwen the sum of the square and the the square of
-format the sum of all whole numbers in the range of 1 to %d is: %d"""
+def Main():
+    format = "The difference betwen the sum of the square and the the square \n"
+    format += "of the sum of all whole numbers in the range of 1 to %d is: %d\n"
 
-N = 10
-sumSquareDiff = abs( squareOfSums(N) - sumOfSquares(N))
-print(format % (N, sumSquareDiff))
-# The difference betwen the sum of the square and the the square of
-# format the sum of all whole numbers in the range of 1 to 10 is: 2640
+    N = 10
+    sumSquareDiff = abs( squareOfSums(N) - sumOfSquares(N))
+    print(format % (N, sumSquareDiff))
+    # The difference betwen the sum of the square and the the square
+    # of the sum of all whole numbers in the range of 1 to 10 is: 2640
 
+    N = 100
+    sumSquareDiff = abs( squareOfSums(N) - sumOfSquares(N))
+    print(format % (N, sumSquareDiff))
+    # The difference betwen the sum of the square and the the square 
+    # of the sum of all whole numbers in the range of 1 to 100 is: 25164150
 
-N = 100
-sumSquareDiff = abs( squareOfSums(N) - sumOfSquares(N))
-print(format % (N, sumSquareDiff))
-# The difference betwen the sum of the square and the the square of
-# format the sum of all whole numbers in the range of 1 to 100 is: 25164150
+Main()

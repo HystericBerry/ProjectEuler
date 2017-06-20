@@ -38,9 +38,12 @@ def largestPalinProduct(N):
     return -1
 
 #####MAIN METHOD#####
-format = "%d is the largest palindrome product!"
-N = 1000
-lpp = largestPalinProduct(N)
-print(format % (lpp))
+def Main():
+    format = "%d is the largest palindrome product!"
+    N = 1000
+    lpp = largestPalinProduct(N)
+    print(format % (lpp))
 
-# 906609 is the largest palindrome product!
+    # 906609 is the largest palindrome product!
+
+Main()

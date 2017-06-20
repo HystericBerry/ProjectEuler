@@ -54,15 +54,18 @@ def three_five_mult_sumOpt( max ):
 
 
 #####MAIN METHOD#####
-upperBound = 1000
-format = "sum of all 3 or 5 multiples below %d is: %d."
+def Main():
+    upperBound = 1000
+    format = "sum of all 3 or 5 multiples below %d is: %d."
 
-# unoptimized method call
-# sum = three_five_mult_sum(upperBound)
-# print(format % (upperBound, sum))
+    # unoptimized method call
+    # sum = three_five_mult_sum(upperBound)
+    # print(format % (upperBound, sum))
 
-# optimized method call
-sum = three_five_mult_sumOpt(upperBound)
-print(format % (upperBound, sum))
+    # optimized method call
+    sum = three_five_mult_sumOpt(upperBound)
+    print(format % (upperBound, sum))
 
-# sum of all 3 or 5 multiples below 1000 is: 233168.
+    # sum of all 3 or 5 multiples below 1000 is: 233168.
+
+Main()
